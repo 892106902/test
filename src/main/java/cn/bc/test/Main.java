@@ -1,8 +1,9 @@
 package cn.bc.test;
 
-public class Main {
+import java.io.File;
 
-    public static int plus(int a, int b) {
-        return a + b;
-    }
+public class Main {
+	public static int plus(int a, int b) {
+		return a + b;
+	}
 }
