@@ -6,10 +6,9 @@ import org.junit.Test;
 
 
 public class MainTest {
+    //测试plus方法
     @Test
     public void testPlus() {
-        Main a = new Main();
-        int num = a.plus(3, 4);
-        assertEquals(7, num);
+        assertEquals(7,Main.plus(3,4));
     }
 }
