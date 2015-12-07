@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--<bean id="editService" class="cn.bc.service.UserServiceImpl" />-->
+    <context:annotation-config/>
+
+    <!-- 如果直接在类上使用了@Component配置，该bean需要下面的语句才能告知spring对其进行自动管理， 这种方式bean的作用范围通过@Scope来配置。下面的语法通过base-package指定扫描的包，也可以指定正则表达式进行过滤。
+        最好在持久层、业务层和控制层分别采用 @Repository、@Service 和 @Controller 对分层中的类进行注释， 而用 @Component
+        对那些比较中立的类进行注释。 -->
+    <context:component-scan base-package="cn.bc"/>
+
+</beans>
